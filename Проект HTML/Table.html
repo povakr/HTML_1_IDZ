@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            список игроков в настольный теннис
+        </title>
+    </head>
+
+    <body>
+        <h1 align="center">
+            Таблица
+        </h1>
+
+        <!-- Гиперссылки-->
+        <div>
+            <hr>
+            <a href="General.html">Лучшие игроки в настольный теннис</a> <br>
+            <b><a href="Table.html">Список игроков в настольный теннис</a></b>
+            <hr>
+        </div>
+
+        <!-- Формы-->
+        <ul type="none">
+            <li><details>
+                <summary> Графики </summary>
+                <div>
+                    <form>
+                        <p>
+                            <b>Значение по оси OX</b>
+                        </p>
+                        <p>
+                            <input type="radio" name="OX" value="Национальность"> Национальность <br>
+                            <input type="radio" name="OX" value="Команда"> Команда <br>
+                            <input type="radio" name="OX" value="Тип игры"> Тип игры
+                        </p>
+                    </form>
+
+                    <form>
+                        <p>
+                            <b>Значение по оси OY</b>
+                        </p>
+                        <p>
+                            <input type="checkbox" name="OX" value="Возраст"> Возраст <br>
+                            <input type="checkbox" name="OX" value="Минимальный рейтинг"> Минимальный рейтинг <br>
+                            <input type="checkbox" name="OX" value="Максимальный рейтинг"> Максимальный рейтинг
+                        </p>
+                    </form>
+
+                    <form>
+                        <input type="button" value="Построить">
+                    </form>
+
+                    <p>
+                        <strong> ТУТ БУДЕТ ГРАФИК</strong>
+                    </p>
+                </div>
+            </details></li>
+
+            <li><details>
+                <summary> Фильтр </summary>
+                <form>
+                    <p>
+                        Имя участника:
+                        <input type="text" name="Имя участника">
+                    </p>
+                    <p>
+                        Национальность:
+                        <input type="text" name="Национальность">
+                    </p>
+                    <p>
+                        Команда:
+                        <input type="text" name="Команда">
+                    </p>
+                    <p>
+                        Тип игры:
+                        <input type="text" name="Тип игры">
+                    </p>
+                    <p>
+                        Возраст: от
+                        <input type="text" name="возраст от">
+                        до
+                        <input type="text" name="возраст до">
+                    </p>
+                    <p>
+                        Рейтинг: от
+                        <input type="text" name="рейтинг от">
+                        до
+                        <input type="text" name="рейтинг до">
+                    </p>
+                </form>
+
+                <form>
+                    <p>
+                        <input type="button" value="Построить">
+                    </p>
+                </form>
+            </details></li>
+
+            <li><details>
+                <summary>Сортировка</summary>
+
+                <form>
+                    <p>
+                    Первый уровень:
+                        <select name="first select">
+                            <option value="0" selected> Ранг </option>
+                            <option value="1"> Имя участника </option>
+                            <option value="2"> Национальность </option>
+                            <option value="3"> Команда </option>
+                            <option value="4" > Тип игры </option>
+                            <option value="5"> Возраст </option>
+                            <option value="6"> Рейтинг (очки) </option>
+                        </select>
+                        По убыванию?
+                        <input type="checkbox" name="OX" value="1 По убыванию?">
+                    </p>
+
+                    <p>
+                        Второй уровень:
+                        <select name="first select">
+                            <option value="0" selected> Ранг </option>
+                            <option value="1"> Имя участника </option>
+                            <option value="2"> Национальность </option>
+                            <option value="3"> Команда </option>
+                            <option value="4" > Тип игры </option>
+                            <option value="5"> Возраст </option>
+                            <option value="6"> Рейтинг (очки) </option>
+                        </select>
+                            По убыванию?
+                            <input type="checkbox" name="OX" value="1 По убыванию?">
+                    </p>
+
+                    <p>
+                        Третий уровень:
+                        <select name="third select">
+                            <option value="0" selected> Ранг </option>
+                            <option value="1"> Имя участника </option>
+                            <option value="2"> Национальность </option>
+                            <option value="3"> Команда </option>
+                            <option value="4" > Тип игры </option>
+                            <option value="5"> Возраст </option>
+                            <option value="6"> Рейтинг (очки) </option>
+                        </select>
+                        По убыванию?
+                        <input type="checkbox" name="OX" value="3 По убыванию?">
+                    </p>
+                </form>
+
+                <form>
+                    <p>
+                        <input type="button" value="Сортировать">
+                    </p>
+                </form>
+            </details></li>
+        </ul>
+
+        <!-- Таблица всех участников -->
+        <table border="1" bordercolor="black">
+            &#173;
+            <thead>
+                <tr>
+                    <th>Ранг</th>
+                    <th>Имя участника</th>
+                    <th>Национальность</th>
+                    <th>Команда</th>
+                    <th>Тип игры</th>
+                    <th>Возраст</th>
+                    <th>Рейтинг (очки)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Sora MATSUSHIMA</td><td>Япония</td><td>Сборная Японии</td><td>Двухсторонний атакующий (левша)</td><td>19</td><td>8550</td></tr>
+                <tr><td>2</td><td>Felix LEBRUN</td><td>Франция</td><td>Alliance Nîmes/Montpellier</td><td>Пенхолд атакующий</td><td>20</td><td>6659</td></tr>
+                <tr><td>3</td><td>Tomokazu HARIMOTO</td><td>Япония</td><td>Okayama Rivets</td><td>Быстрый контратакующий у стола</td><td>23</td><td>6363</td></tr>
+                <tr><td>4</td><td>Truls MOREGARD</td><td>Швеция</td><td>Olympiacos</td><td>Креативный всесторонний</td><td>24</td><td>6180</td></tr>
+                <tr><td>5</td><td>WANG Chuqin</td><td>Китай</td><td>Сборная Китая</td><td>Стратегический атакующий (левша)</td><td>26</td><td>6157</td></tr>
+                <tr><td>6</td><td>LIN Yun-Ju</td><td>Китайский Тайбэй</td><td>Сборная Китайского Тайбэя</td><td>Точный атакующий (левша)</td><td>25</td><td>5630</td></tr>
+                <tr><td>7</td><td>Hugo CALDERANO</td><td>Бразилия</td><td>Сборная Бразилии</td><td>Мощный топ-спин атакующий</td><td>30</td><td>4760</td></tr>
+                <tr><td>8</td><td>Alexis LEBRUN</td><td>Франция</td><td>Alliance Nîmes/Montpellier</td><td>Пенхолд атакующий</td><td>23</td><td>3750</td></tr>
+                <tr><td>9</td><td>LIN Shidong</td><td>Китай</td><td>Сборная Китая</td><td>Агрессивный топ-спин</td><td>21</td><td>3642</td></tr>
+                <tr><td>10</td><td>JANG Woojin</td><td>Южная Корея</td><td>Сборная Республики Корея</td><td>Двухсторонний топ-спин</td><td>30</td><td>3586</td></tr>
+                <tr><td>11</td><td>Dang QIU</td><td>Германия</td><td>Borussia Düsseldorf</td><td>Пенхолд контратакующий</td><td>29</td><td>3450</td></tr>
+                <tr><td>12</td><td>Darko JORGIC</td><td>Словения</td><td>Сборная Словении</td><td>Агрессивный атакующий</td><td>27</td><td>2930</td></tr>
+                <tr><td>13</td><td>ZHOU Qihao</td><td>Китай</td><td>Сборная Китая</td><td>Всесторонний атакующий</td><td>29</td><td>2830</td></tr>
+                <tr><td>14</td><td>WEN Ruibo</td><td>Китай</td><td>Сборная Китая</td><td>Быстрый атакующий у стола</td><td>20</td><td>2715</td></tr>
+                <tr><td>15</td><td>Shunsuke TOGAMI</td><td>Япония</td><td>Kanazawa Port</td><td>Техничный всесторонний</td><td>25</td><td>2538</td></tr>
+                <tr><td>16</td><td>Anders LIND</td><td>Дания</td><td>Сборная Дании</td><td>Современный защитник</td><td>28</td><td>2497</td></tr>
+                <tr><td>17</td><td>OH Junsung</td><td>Южная Корея</td><td>Сборная Республики Корея</td><td>Классический топ-спин</td><td>19</td><td>2157</td></tr>
+                <tr><td>18</td><td>Patrick FRANZISKA</td><td>Германия</td><td>TTF Liebherr Ochsenhausen</td><td>Мощный двухсторонний атакующий</td><td>34</td><td>2115</td></tr>
+                <tr><td>19</td><td>Vladimir SIDORENKO</td><td>Россия</td><td>Сборная России</td><td>Защитный чопер</td><td>22</td><td>2020</td></tr>
+                <tr><td>20</td><td>Hiroto SHINOZUKA</td><td>Япония</td><td>T.T Saitama</td><td>Стабильный всесторонний</td><td>20</td><td>2020</td></tr>
+                <tr><td>21</td><td>Dimitrij OVTCHAROV</td><td>Германия</td><td>FC Saarbrücken-TT</td><td>Опытный контратакующий</td><td>38</td><td>1930</td></tr>
+                <tr><td>22</td><td>Thibault PORET</td><td>Франция</td><td>Rouen SPO</td><td>Атакующий средней дистанции</td><td>21</td><td>1865</td></tr>
+                <tr><td>23</td><td>Flavien COTON</td><td>Франция</td><td>Pontoise-Cergy AS</td><td>Быстрый атакующий у стола</td><td>20</td><td>1864</td></tr>
+                <tr><td>24</td><td>Kanak JHA</td><td>США</td><td>Сборная США</td><td>Атакующий с вариациями вращения</td><td>26</td><td>1730</td></tr>
+                <tr><td>25</td><td>Tomislav PUCAR</td><td>Хорватия</td><td>Olympiacos</td><td>Всесторонний с сильным бэкхендом</td><td>30</td><td>1634</td></tr>
+                <tr><td>26</td><td>Omar ASSAR</td><td>Египет</td><td>Сборная Египта</td><td>Агрессивный атакующий</td><td>33</td><td>1534</td></tr>
+                <tr><td>27</td><td>CHEN Yuanyu</td><td>Китай</td><td>Сборная Китая</td><td>Техничный топ-спин</td><td>21</td><td>1500</td></tr>
+                <tr><td>28</td><td>Elias RANEFUR</td><td>Швеция</td><td>Eslöv's AI</td><td>Двухсторонний атакующий</td><td>21</td><td>1467</td></tr>
+                <tr><td>29</td><td>Anton KALLBERG</td><td>Швеция</td><td>Сборная Швеции</td><td>Контратакующий у стола</td><td>29</td><td>1448</td></tr>
+                <tr><td>30</td><td>FENG Yi-Hsin</td><td>Китайский Тайбэй</td><td>Сборная Китайского Тайбэя</td><td>Стабильный всесторонний</td><td>26</td><td>1395</td></tr>
+                <tr><td>31</td><td>Simon GAUZY</td><td>Франция</td><td>Сборная Франции</td><td>Опытный всесторонний</td><td>31</td><td>1395</td></tr>
+                <tr><td>32</td><td>Yukiya UDA</td><td>Япония</td><td>Ryukyu Asteeda</td><td>Быстрый контратакующий</td><td>29</td><td>1355</td></tr>
+                <tr><td>33</td><td>XIANG Peng</td><td>Китай</td><td>Сборная Китая</td><td>Атакующий средней дистанции</td><td>23</td><td>1275</td></tr>
+                <tr><td>34</td><td>Joao GERALDO</td><td>Португалия</td><td>Сборная Португалии</td><td>Техничный всесторонний</td><td>31</td><td>1262</td></tr>
+                <tr><td>35</td><td>KUO Guan-Hong</td><td>Китайский Тайбэй</td><td>Сборная Китайского Тайбэя</td><td>Агрессивный атакующий</td><td>21</td><td>1228</td></tr>
+                <tr><td>36</td><td>LIM Jonghoon</td><td>Южная Корея</td><td>Сборная Республики Корея</td><td>Двухсторонний топ-спин</td><td>27</td><td>1220</td></tr>
+                <tr><td>37</td><td>LIANG Jingkun</td><td>Китай</td><td>Сборная Китая</td><td>Мощный атакующий</td><td>29</td><td>1219</td></tr>
+                <tr><td>38</td><td>Benedikt DUDA</td><td>Германия</td><td>TSV Bad Königshofen</td><td>Стабильный всесторонний</td><td>32</td><td>1167</td></tr>
+                <tr><td>39</td><td>AN Jaehyun</td><td>Южная Корея</td><td>Сборная Республики Корея</td><td>Быстрый атакующий у стола</td><td>26</td><td>1143</td></tr>
+                <tr><td>40</td><td>Wim VERDONSCHOT</td><td>Германия</td><td>TTC OE Bad Homburg</td><td>Современный защитник</td><td>20</td><td>985</td></tr>
+                <tr><td>41</td><td>WONG Chun Ting</td><td>Гонконг (Китай)</td><td>Сборная Гонконга</td><td>Всесторонний с контролем</td><td>34</td><td>905</td></tr>
+                <tr><td>42</td><td>Manush SHAH</td><td>Индия</td><td>Сборная Индии</td><td>Атакующий с вариациями</td><td>19</td><td>801</td></tr>
+                <tr><td>43</td><td>Kristian KARLSSON</td><td>Швеция</td><td>Сборная Швеции</td><td>Опытный всесторонний</td><td>35</td><td>800</td></tr>
+                <tr><td>44</td><td>Maharu YOSHIMURA</td><td>Япония</td><td>Kinoshita Meister Tokyo</td><td>Креативный всесторонний</td><td>30</td><td>790</td></tr>
+                <tr><td>45</td><td>Finn LUU</td><td>Австралия</td><td>Сборная Австралии</td><td>Атакующий средней дистанции</td><td>21</td><td>783</td></tr>
+                <tr><td>46</td><td>PARK Ganghyeon</td><td>Южная Корея</td><td>Сборная Республики Корея</td><td>Двухсторонний топ-спин</td><td>19</td><td>760</td></tr>
+                <tr><td>47</td><td>Manav THAKKAR</td><td>Индия</td><td>Сборная Индии</td><td>Агрессивный атакующий</td><td>27</td><td>746</td></tr>
+                <tr><td>48</td><td>Lubomir JANCARIK</td><td>Чехия</td><td>Сборная Чехии</td><td>Защитный чопер</td><td>39</td><td>740</td></tr>
+                <tr><td>49</td><td>Tom JARVIS</td><td>Англия</td><td>Сборная Англии</td><td>Контратакующий у стола</td><td>27</td><td>733</td></tr>
+                <tr><td>50</td><td>Jonathan GROTH</td><td>Дания</td><td>TTC RhönSprudel Fulda-Maberzell</td><td>Атакующий с вариациями</td><td>34</td><td>723</td></tr>
+                <tr><td>51</td><td>Cedric NUYTINCK</td><td>Бельгия</td><td>Сборная Бельгии</td><td>Стабильный всесторонний</td><td>33</td><td>676</td></tr>
+                <tr><td>52</td><td>Kirill GERASSIMENKO</td><td>Казахстан</td><td>Сборная Казахстана</td><td>Атакующий средней дистанции</td><td>30</td><td>673</td></tr>
+                <tr><td>53</td><td>Nicholas LUM</td><td>Австралия</td><td>Сборная Австралии</td><td>Быстрый атакующий у стола</td><td>21</td><td>668</td></tr>
+                <tr><td>54</td><td>Andre BERTELSMEIER</td><td>Германия</td><td>SV Werder Bremen</td><td>Двухсторонний атакующий</td><td>21</td><td>665</td></tr>
+                <tr><td>55</td><td>Csaba ANDRAS</td><td>Венгрия</td><td>Сборная Венгрии</td><td>Техничный всесторонний</td><td>22</td><td>656</td></tr>
+                <tr><td>56</td><td>Joe SEYFRIED</td><td>Франция</td><td>Сборная Франции</td><td>Атакующий с контролем</td><td>22</td><td>655</td></tr>
+                <tr><td>57</td><td>Milosz REDZIMSKI</td><td>Польша</td><td>Сборная Польши</td><td>Агрессивный топ-спин</td><td>23</td><td>648</td></tr>
+                <tr><td>58</td><td>Alvaro ROBLES</td><td>Испания</td><td>Сборная Испании</td><td>Всесторонний атакующий</td><td>30</td><td>630</td></tr>
+                <tr><td>59</td><td>HUANG Youzheng</td><td>Китай</td><td>Сборная Китая</td><td>Быстрый контратакующий</td><td>21</td><td>620</td></tr>
+                <tr><td>60</td><td>Ryoichi YOSHIYAMA</td><td>Япония</td><td>Kinoshita Meister Tokyo</td><td>Двухсторонний топ-спин</td><td>23</td><td>620</td></tr>
+                <tr><td>61</td><td>Adrien RASSENFOSSE</td><td>Бельгия</td><td>Сборная Бельгии</td><td>Атакующий с вариациями</td><td>23</td><td>614</td></tr>
+                <tr><td>62</td><td>Andrej GACINA</td><td>Хорватия</td><td>Сборная Хорватии</td><td>Опытный всесторонний</td><td>40</td><td>578</td></tr>
+                <tr><td>63</td><td>Ryuusei KAWAKAMI</td><td>Япония</td><td>Shizuoka Jade</td><td>Быстрый атакующий у стола</td><td>20</td><td>575</td></tr>
+                <tr><td>64</td><td>Darius MOVILEANU</td><td>Румыния</td><td>Сборная Румынии</td><td>Атакующий средней дистанции</td><td>20</td><td>542</td></tr>
+                <tr><td>65</td><td>LI Tianyang</td><td>Китай</td><td>Сборная Китая</td><td>Техничный топ-спин</td><td>19</td><td>530</td></tr>
+            </tbody>
+        </table>
+    </body>
+</html>
