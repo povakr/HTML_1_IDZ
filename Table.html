@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="utf-8">
         <title>
@@ -30,25 +30,19 @@
                             <b>Значение по оси OX</b>
                         </p>
                         <p>
-                            <input type="radio" name="OX" value="Национальность"> Национальность <br>
-                            <input type="radio" name="OX" value="Команда"> Команда <br>
-                            <input type="radio" name="OX" value="Тип игры"> Тип игры
+                            <label><input type="radio" id="10" name="OX" value="nation"> Национальность </label><br>
+                            <label><input type="radio" id="11" name="OX" value="command"> Команда</label> <br>
+                            <label><input type="radio" id="12" name="OX" value="type_game"> Тип игры</label>
                         </p>
-                    </form>
-
-                    <form>
                         <p>
                             <b>Значение по оси OY</b>
                         </p>
                         <p>
-                            <input type="checkbox" name="OX" value="Возраст"> Возраст <br>
-                            <input type="checkbox" name="OX" value="Минимальный рейтинг"> Минимальный рейтинг <br>
-                            <input type="checkbox" name="OX" value="Максимальный рейтинг"> Максимальный рейтинг
+                            <label><input type="checkbox" id="20" name="OY" value="sr_rating"> Средний Рейтинг</label> <br>
+                            <label><input type="checkbox" id="21" name="OY" value="min_rating"> Минимальный рейтинг</label> <br>
+                            <label><input type="checkbox" id="22" name="OY" value="max_rating"> Максимальный рейтинг</label>
                         </p>
-                    </form>
-
-                    <form>
-                        <input type="button" value="Построить">
+                        <input type="button" id="-10" value="Построить">
                     </form>
 
                     <p>
@@ -60,40 +54,60 @@
             <li><details>
                 <summary> Фильтр </summary>
                 <form>
-                    <p>
-                        Имя участника:
-                        <input type="text" name="Имя участника">
-                    </p>
-                    <p>
-                        Национальность:
-                        <input type="text" name="Национальность">
-                    </p>
-                    <p>
-                        Команда:
-                        <input type="text" name="Команда">
-                    </p>
-                    <p>
-                        Тип игры:
-                        <input type="text" name="Тип игры">
-                    </p>
-                    <p>
-                        Возраст: от
-                        <input type="text" name="возраст от">
-                        до
-                        <input type="text" name="возраст до">
-                    </p>
-                    <p>
-                        Рейтинг: от
-                        <input type="text" name="рейтинг от">
-                        до
-                        <input type="text" name="рейтинг до">
-                    </p>
-                </form>
 
-                <form>
                     <p>
-                        <input type="button" value="Построить">
+                        <label>
+                            Имя участника:
+                            <input type="text" id="30" name="name">
+                        </label>
                     </p>
+
+
+                    <p>
+                        <label>
+                            Национальность:
+                            <input type="text" id="31" name="nation">
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            Команда:
+                            <input type="text" id="32" name="command">
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            Тип игры:
+                            <input type="text" id="33" name="type_game">
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            Возраст: от
+                            <input type="number" id="34" name="min_age">
+                            до
+                            <input type="number" id="35" name="max_age">
+                        </label>
+                    </p>
+
+
+                    <p>
+                        <label>
+                            Рейтинг: от
+                            <input type="number" id="36" name="min_rating">
+                            до
+                            <input type="number" id="37" name="max_rating">
+                        </label>
+                    </p>
+
+                    <p>
+                        <input type="button" id="-30"  value="Найти">
+                    </p>
+
+
                 </form>
             </details></li>
 
@@ -101,10 +115,13 @@
                 <summary>Сортировка</summary>
 
                 <form>
+
                     <p>
+                        <label>
                     Первый уровень:
-                        <select name="first select">
-                            <option value="0" selected> Ранг </option>
+                        <select id="40" name="first select">
+                            <option value="-1"> нет выбора </option>
+                            <option value="0"> Ранг </option>
                             <option value="1"> Имя участника </option>
                             <option value="2"> Национальность </option>
                             <option value="3"> Команда </option>
@@ -113,43 +130,47 @@
                             <option value="6"> Рейтинг (очки) </option>
                         </select>
                         По убыванию?
-                        <input type="checkbox" name="OX" value="1 По убыванию?">
+                        <input type="checkbox" id="41" name="OX" value="1_In_descending_order?">
+                        </label>
                     </p>
 
                     <p>
-                        Второй уровень:
-                        <select name="first select">
-                            <option value="0" selected> Ранг </option>
-                            <option value="1"> Имя участника </option>
-                            <option value="2"> Национальность </option>
-                            <option value="3"> Команда </option>
-                            <option value="4" > Тип игры </option>
-                            <option value="5"> Возраст </option>
-                            <option value="6"> Рейтинг (очки) </option>
-                        </select>
+                        <label>
+                            Второй уровень:
+                            <select id="42" name="first select">
+                                <option value="-1"> нет выбора </option>
+                                <option value="0"> Ранг </option>
+                                <option value="1"> Имя участника </option>
+                                <option value="2"> Национальность </option>
+                                <option value="3"> Команда </option>
+                                <option value="4"> Тип игры </option>
+                                <option value="5"> Возраст </option>
+                                <option value="6"> Рейтинг (очки) </option>
+                            </select>
+                                По убыванию?
+                                <input type="checkbox" id="43" name="OX" value="2_In_descending_order?">
+                        </label>
+                    </p>
+
+                    <p>
+                        <label>
+                            Третий уровень:
+                            <select id="44" name="third select">
+                                <option value="-1"> нет выбора </option>
+                                <option value="0"> Ранг </option>
+                                <option value="1"> Имя участника </option>
+                                <option value="2"> Национальность </option>
+                                <option value="3"> Команда </option>
+                                <option value="4"> Тип игры </option>
+                                <option value="5"> Возраст </option>
+                                <option value="6"> Рейтинг (очки) </option>
+                            </select>
                             По убыванию?
-                            <input type="checkbox" name="OX" value="1 По убыванию?">
+                            <input type="checkbox" id="45" name="OX" value="3_In_descending_order?">
+                        </label>
                     </p>
-
                     <p>
-                        Третий уровень:
-                        <select name="third select">
-                            <option value="0" selected> Ранг </option>
-                            <option value="1"> Имя участника </option>
-                            <option value="2"> Национальность </option>
-                            <option value="3"> Команда </option>
-                            <option value="4" > Тип игры </option>
-                            <option value="5"> Возраст </option>
-                            <option value="6"> Рейтинг (очки) </option>
-                        </select>
-                        По убыванию?
-                        <input type="checkbox" name="OX" value="3 По убыванию?">
-                    </p>
-                </form>
-
-                <form>
-                    <p>
-                        <input type="button" value="Сортировать">
+                        <input type="button" id="-40" value="Сортировать">
                     </p>
                 </form>
             </details></li>
