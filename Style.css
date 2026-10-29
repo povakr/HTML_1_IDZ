@@ -4,12 +4,12 @@ body {
     font-family: Georgia, "Times New Roman", serif;
 }
 
-/* заголовок скрыт, чтобы сверху было меню, как в макете */
+/* заголовок скрыт  */
 #Header {
     display: none;
 }
 
-/* ===== меню ===== */
+/* меню */
 #top-menu {
     background: #262626;
     text-align: center; /* центрирование меню */
@@ -61,7 +61,7 @@ body {
     display: block;
     width: 100%;
     height: 127px;
-    object-fit: cover; /* чтобы фото не растягивалось */
+    object-fit: fill ; /* чтобы фото не растягивалось */
 }
 .big-image img {
     height: 190px;
@@ -144,14 +144,14 @@ body {
 .article-3col img {
     float: left;
     width: 46%;
-    height: 200px;
+    height: 10%;
     margin: 0 1.5%;
     object-fit: cover;
 }
 .article-2col img {
     float: left;
     width: 26%;
-    height: 200px;
+    height: 50%;
     margin-left: 2%;
     object-fit: cover;
 }
