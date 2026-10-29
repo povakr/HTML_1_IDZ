@@ -1,0 +1,175 @@
+/* ===== база ===== */
+* { box-sizing: border-box; }
+
+html {
+  /* пропорциональное масштабирование: 16px при ширине окна 1960px */
+  font-size: clamp(6px, 0.8163vw, 16px);
+}
+
+body {
+  margin: 0;
+  background: #f7f8fa;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #1b1b1b;
+}
+
+/* ===== H1: скрыт, чтобы верх страницы совпадал с макетом (тёмное меню первым).
+   Хотите видимый заголовок — уберите display:none и раскомментируйте блок ниже ===== */
+#Header { display: none; }
+/* #Header { margin: 1rem 0 0; text-align: center; font-size: 1.6rem; font-weight: bold; } */
+
+/* ===== верхнее меню (span#top-menu как блок + inline-block пункты) ===== */
+#top-menu {
+  display: block;               /* span по умолчанию inline — делаем блоком */
+  background: #262626;
+  text-align: center;
+  font-size: 0;                 /* убираем зазоры между inline-block */
+}
+#top-menu .menu {
+  display: inline-block;
+  margin: 0; padding: 0;
+  list-style: none;
+}
+#top-menu .menu li { display: inline-block; font-size: 1rem; }
+#top-menu .menu a {
+  display: inline-block;
+  padding: 0.9rem 1.7rem;
+  color: #fff;
+  text-decoration: none;
+  border-right: 1px solid #5a5a5a;
+}
+#top-menu .menu li:first-child a { border-left: 1px solid #5a5a5a; }
+#top-menu .menu li.active a { background: #0ea34f; }
+#top-menu .menu a:hover { background: #3d3d3d; }
+
+/* ===== коллаж из 5 фото (#topImage вместо header#hero) ===== */
+#topImage {
+  display: block;
+  width: 90%;
+  margin: 0.8rem auto 0;
+  font-size: 0;
+}
+.left-image, .Right-image {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+}
+.left-image  { width: 33.2%; }
+.Right-image { width: 66.8%; }
+
+.top-image { display: block; }          /* ссылка-обёртка как блок */
+.top-image img {
+  display: block;
+  width: 100%;                          /* перебивает width="110/140" в HTML */
+  height: 7.95rem;                      /* перебивает height="111" */
+  object-fit: cover;
+}
+.big-image img { height: 11.9rem; }     /* большая правая картинка */
+
+.bottom-image { font-size: 0; }
+.bottom-image .top-image {
+  display: inline-block;                /* две картинки в ряд */
+  width: 50%;
+}
+.bottom-image .top-image img { height: 4rem; }
+
+/* ===== средняя часть: сайдбары + статьи ===== */
+#content {
+  display: block;
+  width: 96%;
+  margin: 2.2rem auto 0;
+  font-size: 0;
+}
+.sidebar {
+  display: inline-block;
+  vertical-align: top;
+  width: 10.5%;
+  font-size: 1rem;
+  text-align: center;
+}
+#article {                              /* div#article вместо main#articles */
+  display: inline-block;
+  vertical-align: top;
+  width: 75%;
+  margin: 0 1.75%;
+  font-size: 1rem;
+}
+
+/* карточки боковых колонок */
+.card { display: block; width: 82%; margin: 0 auto 2.2rem; }
+.card-img {
+  display: block;
+  width: 100%; height: 4.6rem;
+  object-fit: cover;
+  border: 2px solid #2a8f9a;
+}
+.card-title { display: block; margin: 0.5rem 0 0.2rem; font-size: 1rem; font-weight: bold; }
+.card-text  { display: block; margin: 0; font-size: 0.85rem; line-height: 1.4; }
+.card-link  { color: #b8860b; text-decoration: none; }   /* строчный элемент */
+
+/* статьи-рамки */
+.article {
+  display: block;
+  border: 1px solid #8f8f8f;
+  background: #fbfcfd;
+  padding: 1.4rem 1.2rem 1.2rem;
+  margin: 0 0 1.8rem;
+  font-size: 0;
+}
+.article-title {
+  display: block;
+  text-align: center;
+  font-size: 1.15rem;
+  margin: 0 0 1.3rem;
+}
+.text-col {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1rem;
+  line-height: 1.55;
+  text-align: left;
+}
+.article-3col .text-col { width: 23.5%; }
+.article-3col .article-img {
+  display: inline-block;
+  vertical-align: top;
+  width: 46%; height: 12.6rem;
+  object-fit: cover;
+  margin: 0 1.5%;
+}
+.article-2col .text-col { width: 70%; }
+.article-2col .article-img {
+  display: inline-block;
+  vertical-align: top;
+  width: 26%; height: 12.6rem;
+  object-fit: cover;
+  margin-left: 2%;
+}
+
+/* кнопка «Подробнее» */
+.more-row { display: block; margin: 0.9rem 0 0; font-size: 1rem; }
+.more-row.left  { text-align: left; }
+.more-row.right { text-align: right; }
+.more {
+  display: inline-block;
+  background: #4fb3f6;
+  border: 2px solid #101010;
+  border-radius: 0.3rem;
+  color: #fff;
+  font-size: 0.85rem;
+  padding: 0.15rem 0.7rem;
+  text-decoration: none;
+}
+.more:hover { background: #2f9be0; }
+
+/* ===== футер ===== */
+#footer {
+  display: block;
+  background: #262626;
+  color: #fff;
+  text-align: center;
+  padding: 1.3rem 0;
+  margin-top: 2.5rem;
+  font-size: 1rem;
+}
+#footer p { margin: 0; }
