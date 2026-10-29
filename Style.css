@@ -1,175 +1,185 @@
-/* ===== база ===== */
-* { box-sizing: border-box; }
-
-html {
-  /* пропорциональное масштабирование: 16px при ширине окна 1960px */
-  font-size: clamp(6px, 0.8163vw, 16px);
-}
-
 body {
-  margin: 0;
-  background: #f7f8fa;
-  font-family: Georgia, "Times New Roman", serif;
-  color: #1b1b1b;
+    margin: 0;
+    background: #F7F8FA;
+    font-family: Georgia, "Times New Roman", serif;
 }
 
-/* ===== H1: скрыт, чтобы верх страницы совпадал с макетом (тёмное меню первым).
-   Хотите видимый заголовок — уберите display:none и раскомментируйте блок ниже ===== */
-#Header { display: none; }
-/* #Header { margin: 1rem 0 0; text-align: center; font-size: 1.6rem; font-weight: bold; } */
+/* заголовок скрыт, чтобы сверху было меню, как в макете */
+#Header {
+    display: none;
+}
 
-/* ===== верхнее меню (span#top-menu как блок + inline-block пункты) ===== */
+/* ===== меню ===== */
 #top-menu {
-  display: block;               /* span по умолчанию inline — делаем блоком */
-  background: #262626;
-  text-align: center;
-  font-size: 0;                 /* убираем зазоры между inline-block */
+    background: #262626;
+    text-align: center; /* центрирование меню */
 }
-#top-menu .menu {
-  display: inline-block;
-  margin: 0; padding: 0;
-  list-style: none;
+#top-menu ul {
+    display: inline-block; /* чтобы центрировать меню через text-align */
+    list-style-type: none; /* ul без маркеров */
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* блок охватывает плавающие li */
 }
-#top-menu .menu li { display: inline-block; font-size: 1rem; }
-#top-menu .menu a {
-  display: inline-block;
-  padding: 0.9rem 1.7rem;
-  color: #fff;
-  text-decoration: none;
-  border-right: 1px solid #5a5a5a;
+#top-menu li {
+    float: left; /* чтобы меню стало горизонтальным */
 }
-#top-menu .menu li:first-child a { border-left: 1px solid #5a5a5a; }
-#top-menu .menu li.active a { background: #0ea34f; }
-#top-menu .menu a:hover { background: #3d3d3d; }
+#top-menu a {
+    display: block; /* преобразование элемента в блок */
+    padding: 10px 20px;
+    color: #FFFFFF;
+    text-decoration: none; /* ссылки без подчёркивания */
+    border-right: 1px solid #5A5A5A;
+}
+/* изменение цвета меню, когда на него наводится курсор */
+#top-menu a:hover {
+    background: #3D3D3D;
+}
+#top-menu .active a {
+    background: #0EA34F;
+}
 
-/* ===== коллаж из 5 фото (#topImage вместо header#hero) ===== */
+/* ===== коллаж из 5 фото ===== */
 #topImage {
-  display: block;
-  width: 90%;
-  margin: 0.8rem auto 0;
-  font-size: 0;
+    width: 90%;
+    margin: 10px auto 20px auto; /* выравнивание блока по центру */
+    overflow: hidden; /* блок охватывает содержимое */
 }
-.left-image, .Right-image {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 0;
+.left-image {
+    float: left;
+    width: 33.2%;
 }
-.left-image  { width: 33.2%; }
-.Right-image { width: 66.8%; }
-
-.top-image { display: block; }          /* ссылка-обёртка как блок */
+.Right-image {
+    float: left;
+    width: 66.8%;
+}
+.top-image {
+    display: block;
+    overflow: hidden;
+}
 .top-image img {
-  display: block;
-  width: 100%;                          /* перебивает width="110/140" в HTML */
-  height: 7.95rem;                      /* перебивает height="111" */
-  object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 127px;
+    object-fit: cover; /* чтобы фото не растягивалось */
 }
-.big-image img { height: 11.9rem; }     /* большая правая картинка */
-
-.bottom-image { font-size: 0; }
+.big-image img {
+    height: 190px;
+}
+.bottom-image {
+    overflow: hidden;
+}
 .bottom-image .top-image {
-  display: inline-block;                /* две картинки в ряд */
-  width: 50%;
+    float: left;
+    width: 50%;
 }
-.bottom-image .top-image img { height: 4rem; }
+.bottom-image .top-image img {
+    height: 64px;
+}
 
-/* ===== средняя часть: сайдбары + статьи ===== */
+/* ===== средняя часть ===== */
 #content {
-  display: block;
-  width: 96%;
-  margin: 2.2rem auto 0;
-  font-size: 0;
+    width: 96%;
+    margin: 0 auto 20px auto; /* выравнивание блока по центру */
+    overflow: hidden; /* блок охватывает плавающие колонки */
 }
 .sidebar {
-  display: inline-block;
-  vertical-align: top;
-  width: 10.5%;
-  font-size: 1rem;
-  text-align: center;
+    float: left;
+    width: 10.5%;
+    text-align: center;
 }
-#article {                              /* div#article вместо main#articles */
-  display: inline-block;
-  vertical-align: top;
-  width: 75%;
-  margin: 0 1.75%;
-  font-size: 1rem;
+#article {
+    float: left;
+    width: 75%;
+    margin: 0 1.75%;
 }
 
-/* карточки боковых колонок */
-.card { display: block; width: 82%; margin: 0 auto 2.2rem; }
+/* карточки в боковых колонках */
+.card {
+    margin: 0 0 20px 0;
+}
 .card-img {
-  display: block;
-  width: 100%; height: 4.6rem;
-  object-fit: cover;
-  border: 2px solid #2a8f9a;
+    display: block;
+    width: 100%;
+    height: 70px;
+    margin: auto;
+    border: 2px solid #2A8F9A;
 }
-.card-title { display: block; margin: 0.5rem 0 0.2rem; font-size: 1rem; font-weight: bold; }
-.card-text  { display: block; margin: 0; font-size: 0.85rem; line-height: 1.4; }
-.card-link  { color: #b8860b; text-decoration: none; }   /* строчный элемент */
+.card-title {
+    margin: 5px 0;
+    font-weight: bold;
+}
+.card-text {
+    font-size: 14px;
+}
+.card-link {
+    color: #B8860B;
+}
 
-/* статьи-рамки */
+/* ===== статьи ===== */
 .article {
-  display: block;
-  border: 1px solid #8f8f8f;
-  background: #fbfcfd;
-  padding: 1.4rem 1.2rem 1.2rem;
-  margin: 0 0 1.8rem;
-  font-size: 0;
+    border: 1px solid #8F8F8F;
+    padding: 15px;
+    margin: 0 0 20px 0;
+    overflow: hidden; /* блок охватывает содержимое */
 }
 .article-title {
-  display: block;
-  text-align: center;
-  font-size: 1.15rem;
-  margin: 0 0 1.3rem;
+    text-align: center;
 }
-.text-col {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 1rem;
-  line-height: 1.55;
-  text-align: left;
+/* для текстовых блоков */
+.article div {
+    float: left;
+    overflow: hidden;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2.0;
 }
-.article-3col .text-col { width: 23.5%; }
-.article-3col .article-img {
-  display: inline-block;
-  vertical-align: top;
-  width: 46%; height: 12.6rem;
-  object-fit: cover;
-  margin: 0 1.5%;
+.article-3col div {
+    width: 23.5%;
 }
-.article-2col .text-col { width: 70%; }
-.article-2col .article-img {
-  display: inline-block;
-  vertical-align: top;
-  width: 26%; height: 12.6rem;
-  object-fit: cover;
-  margin-left: 2%;
+.article-2col div {
+    width: 70%;
+}
+/* для рисунка */
+.article-3col img {
+    float: left;
+    width: 46%;
+    height: 200px;
+    margin: 0 1.5%;
+    object-fit: cover;
+}
+.article-2col img {
+    float: left;
+    width: 26%;
+    height: 200px;
+    margin-left: 2%;
+    object-fit: cover;
 }
 
 /* кнопка «Подробнее» */
-.more-row { display: block; margin: 0.9rem 0 0; font-size: 1rem; }
-.more-row.left  { text-align: left; }
-.more-row.right { text-align: right; }
-.more {
-  display: inline-block;
-  background: #4fb3f6;
-  border: 2px solid #101010;
-  border-radius: 0.3rem;
-  color: #fff;
-  font-size: 0.85rem;
-  padding: 0.15rem 0.7rem;
-  text-decoration: none;
+.more-row {
+    text-align: right;
+    text-indent: 0;
+    margin: 10px 0 0 0;
 }
-.more:hover { background: #2f9be0; }
+.more-row.left {
+    text-align: left;
+}
+.more {
+    display: inline-block;
+    background: #4FB3F6;
+    border: 2px solid #000000;
+    color: #FFFFFF;
+    font-size: 13px;
+    padding: 3px 10px;
+    text-decoration: none;
+}
 
 /* ===== футер ===== */
 #footer {
-  display: block;
-  background: #262626;
-  color: #fff;
-  text-align: center;
-  padding: 1.3rem 0;
-  margin-top: 2.5rem;
-  font-size: 1rem;
+    background: #262626;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
 }
-#footer p { margin: 0; }
