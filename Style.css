@@ -42,14 +42,17 @@ a {
 
 /* ---------- Коллаж из 5 фото ---------- */
 #topImage {
+    display: block;
     width: 90%;
     margin: 10px auto;
-    font-size: 0;
+     overflow: hidden;
 }
 .left-image {
-    width: 33%;
+    float: left;
+    width: 34%;
 }
 .Right-image {
+    float: right;
     width: 66%;
 }
 .top-image {
@@ -62,8 +65,11 @@ a {
 .big-image img {
     height: 190px;
 }
+.bottom-image {
+    overflow: hidden;
+}
 .bottom-image .top-image {
-    display: inline-block;
+    float: left;
     width: 50%;
 }
 .bottom-image .top-image img {
