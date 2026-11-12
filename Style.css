@@ -35,7 +35,7 @@ a {
     color: #fff;
 }
 
-/* заголовок скрыт, чтобы сверху было меню, как в макете */
+/* заголовок скрыт */
 #Header {
     display: none;
 }
@@ -87,11 +87,12 @@ a {
 
 /* Карточки в боковых колонках */
 .card {
-    padding: 3%;
-    margin: 0;
+    padding: 2%;
+    margin: 16px 0;
 }
 .card h3 {
     text-align: center;
+    margin: 0;
 }
 .card-img {
         border: 1px solid #2a8f9a;
@@ -99,6 +100,7 @@ a {
 }
 .card-text {
     font-size: 14px;
+    margin: 0;
 }
 
 /* Горизонтальные блоки, статьи */
