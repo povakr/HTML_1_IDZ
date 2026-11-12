@@ -1,185 +1,155 @@
-body {
-    margin: 0;
-    background: #F7F8FA;
-    /*font-family: Georgia, "Times New Roman", serif; */
+img {
+    display: block;
+}
+a {
+    color: #806000;
 }
 
-/* заголовок скрыт  */
+.left-image, .Right-image, .sidebar, #article, .text-col, .article-img {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* ---------- Меню ---------- */
+#top-menu {
+    display: block;
+    background: #262626;
+    text-align: center;
+}
+#top-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#top-menu li {
+    display: inline-block;
+}
+#top-menu a {
+    display: block;
+    padding: 10px 16px;
+    color: #fff;
+    text-decoration: none;
+}
+#top-menu .active a {
+    background: #0ea34f;
+    color: #fff;
+}
+
+/* заголовок скрыт, чтобы сверху было меню, как в макете */
 #Header {
     display: none;
 }
 
-/* меню */
-#top-menu {
-    background: #262626;
-    text-align: center; /* центрирование меню */
-}
-#top-menu ul {
-    display: inline-block; /* чтобы центрировать меню через text-align */
-    list-style-type: none; /* ul без маркеров */
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* блок охватывает плавающие li */
-}
-#top-menu li {
-    float: left; /* чтобы меню стало горизонтальным */
-}
-#top-menu a {
-    display: block; /* преобразование элемента в блок */
-    padding: 10px 20px;
-    color: #FFFFFF;
-    text-decoration: none; /* ссылки без подчёркивания */
-    border-right: 1px solid #5A5A5A;
-}
-/* изменение цвета меню, когда на него наводится курсор */
-#top-menu a:hover {
-    background: #3D3D3D;
-}
-#top-menu .active a {
-    background: #0EA34F;
-}
-
-/* ===== коллаж из 5 фото ===== */
+/* ---------- Коллаж из 5 фото ---------- */
 #topImage {
     width: 90%;
-    margin: 10px auto 20px auto; /* выравнивание блока по центру */
-    overflow: hidden; /* блок охватывает содержимое */
+    margin: 10px auto;
+    font-size: 0;
 }
 .left-image {
-    float: left;
-    width: 33.2%;
+    width: 33%;
 }
 .Right-image {
-    float: left;
-    width: 66.8%;
+    width: 66%;
 }
 .top-image {
     display: block;
-    overflow: hidden;
 }
 .top-image img {
-    display: block;
     width: 100%;
     height: 127px;
-    object-fit: fill ; /* чтобы фото не растягивалось */
 }
 .big-image img {
     height: 190px;
 }
-.bottom-image {
-    overflow: hidden;
-}
 .bottom-image .top-image {
-    float: left;
+    display: inline-block;
     width: 50%;
 }
 .bottom-image .top-image img {
     height: 64px;
 }
 
-/* ===== средняя часть ===== */
+/* ---------- Центральный блок ---------- */
 #content {
     width: 96%;
-    margin: 0 auto 20px auto; /* выравнивание блока по центру */
-    overflow: hidden; /* блок охватывает плавающие колонки */
+    margin: 10px auto;
 }
 .sidebar {
-    float: left;
-    width: 10.5%;
+    width: 10%;
     text-align: center;
 }
 #article {
-    float: left;
-    width: 75%;
-    margin: 0 1.75%;
+    width: 74%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
-/* карточки в боковых колонках */
+/* Карточки в боковых колонках */
 .card {
-    margin: 0 0 20px 0;
+    padding: 3%;
+    margin: 0;
+}
+.card h3 {
+    text-align: center;
 }
 .card-img {
-    display: block;
+        border: 1px solid #2a8f9a;
     width: 100%;
-    height: 70px;
-    margin: auto;
-    border: 2px solid #2A8F9A;
-}
-.card-title {
-    margin: 5px 0;
-    font-weight: bold;
 }
 .card-text {
     font-size: 14px;
 }
-.card-link {
-    color: #B8860B;
-}
 
-/* ===== статьи ===== */
+/* Горизонтальные блоки, статьи */
 .article {
-    border: 1px solid #8F8F8F;
-    padding: 15px;
-    margin: 0 0 20px 0;
-    overflow: hidden; /* блок охватывает содержимое */
+    border: 1px solid #888;
+    padding: 1%;
+    margin-top: 2%;
 }
 .article-title {
     text-align: center;
 }
-/* для текстовых блоков */
-.article div {
-    float: left;
-    overflow: hidden;
-    text-align: justify;
-    text-indent: 30px;
-    line-height: 2.0;
+.article-3col .text-col {
+    width: 30%;
 }
-.article-3col div {
-    width: 23.5%;
-}
-.article-2col div {
-    width: 70%;
-}
-/* для рисунка */
-.article-3col img {
-    float: left;
-    width: 46%;
-    height: 10%;
-    margin: 0 1.5%;
-    object-fit: cover;
-}
-.article-2col img {
-    float: left;
-    width: 26%;
-    height: 50%;
+.article-3col .article-img {
+    width: 30%;
     margin-left: 2%;
-    object-fit: cover;
+    margin-right: 2%;
 }
-
-/* кнопка «Подробнее» */
-.more-row {
+.article-2col .text-col {
+    width: 60%;
+}
+.article-2col .article-img {
+    width: 30%;
+    margin-left: 2%;
+}
+.left {
+    margin-left: 2%;
+}
+.right {
+    margin-right: 2%;
     text-align: right;
-    text-indent: 0;
-    margin: 10px 0 0 0;
-}
-.more-row.left {
-    text-align: left;
 }
 .more {
     display: inline-block;
-    background: #4FB3F6;
-    border: 2px solid #000000;
-    color: #FFFFFF;
-    font-size: 13px;
-    padding: 3px 10px;
+    padding: 2px 8px;
+    background: #4fb3f6;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
     text-decoration: none;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
-/* ===== футер ===== */
+/* ---------- Футер ---------- */
 #footer {
     background: #262626;
-    color: #FFFFFF;
+    color: #fff;
     text-align: center;
-    padding: 15px 0;
+    border-top: 1px solid #888;
     margin-top: 20px;
+    padding: 10px;
 }
