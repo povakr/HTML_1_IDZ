@@ -1,157 +1,226 @@
-img {
-    display: block;
-}
-a {
-    color: #806000;
-}
-
-.left-image, .Right-image, .sidebar, #article, .text-col, .article-img {
-    display: inline-block;
-    vertical-align: top;
+body {
+    margin: 10px auto;
+    width: min(100%, 1400px);
+    /* убарать 5% иправить на min max */
 }
 
-/* ---------- Меню ---------- */
-#top-menu {
-    display: block;
-    background: #262626;
-    text-align: center;
+p {
+    margin: clamp(8px, 1vw, 14px) 0;
 }
-#top-menu ul {
+
+/* Шапка */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#logo {
+    color: dodgerblue;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
 }
-#top-menu li {
-    display: inline-block;
-}
-#top-menu a {
+
+.menu a {
     display: block;
-    padding: 10px 16px;
-    color: #fff;
+    padding: clamp(6px, 1vw, 12px) clamp(8px, 1.5vw, 16px);
     text-decoration: none;
 }
-#top-menu .active a {
-    background: #0ea34f;
-    color: #fff;
+
+.active a {
+    background: dodgerblue;
+    color: white;
+    border-radius: 4px;
 }
 
-/* заголовок скрыт */
-#Header {
-    display: none;
+/* Картинки сверху */
+#top-image {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 5px;
+    height: auto;
+
+    margin: 15px 0;
 }
 
-/* ---------- Коллаж из 5 фото ---------- */
-#topImage {
-    width: 90%;
-    margin: 10px auto;
-    font-size: 0;
-}
-.left-image {
-    width: 33%;
-}
-.Right-image {
-    width: 66%;
-}
-.top-image {
-    display: block;
-}
-.top-image img {
+#top-image img {
     width: 100%;
-    height: 127px;
-}
-.big-image img {
-    height: 190px;
-}
-.bottom-image .top-image {
-    display: inline-block;
-    width: 50%;
-}
-.bottom-image .top-image img {
-    height: 64px;
+    height: auto;
+    object-fit: cover;
 }
 
-/* ---------- Центральный блок ---------- */
+#top-image > img {
+    height: 100%;
+}
+
+#top-right {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* а флекс */
+}
+
+#top-right img {
+    flex: 1;
+    min-height: 0;
+    height: auto;
+}
+
+/* Основная часть */
 #content {
-    width: 96%;
-    margin: 10px auto;
-}
-.sidebar {
-    width: 10%;
-    text-align: center;
-}
-#article {
-    width: 74%;
-    margin-left: 2%;
-    margin-right: 2%;
+    display: flex;
+    gap: 20px;
 }
 
-/* Карточки в боковых колонках */
-.card {
-    padding: 2%;
-    margin: 16px 0;
-}
-.card h3 {
-    text-align: center;
-    margin: 0;
-}
-.card-img {
-        border: 1px solid #2a8f9a;
-    width: 100%;
-}
-.card-text {
-    font-size: 14px;
-    margin: 0;
+#articles {
+    /* заменить на flex: 1 */
+    flex: 5;
 }
 
-/* Горизонтальные блоки, статьи */
+#sidebar {
+    flex: 2;
+    border-left: 1px solid olive;
+    padding-left: 20px;
+}
+
 .article {
-    border: 1px solid #888;
-    padding: 1%;
-    margin-top: 2%;
+    margin-bottom: 25px;
 }
-.article-title {
+
+.article h2 {
+    margin-top: 0;
     text-align: center;
 }
-.article-3col .text-col {
-    width: 30%;
+
+.article-body {
+    display: flex;
+    gap: 15px;
 }
-.article-3col .article-img {
-    width: 30%;
-    margin-left: 2%;
-    margin-right: 2%;
+
+.article-text {
+    flex: 1;
 }
-.article-2col .text-col {
-    width: 60%;
+
+.wide {
 }
-.article-2col .article-img {
-    width: 30%;
-    margin-left: 2%;
+
+.article-body img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
 }
-.left {
-    margin-left: 2%;
+
+img.small {
+    width: 25%;
 }
-.right {
-    margin-right: 2%;
+
+.more {
     text-align: right;
 }
-.more {
-    display: inline-block;
-    padding: 2px 8px;
-    background: #4fb3f6;
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    border: 1px solid black;
-    border-radius: 5px;
+
+.more a {
+    color: olive;
 }
 
-/* ---------- Футер ---------- */
+.left {
+    text-align: left;
+}
+
+/* Карточки справа */
+.card {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.card-text {
+    flex: 1;
+}
+
+.card h3 {
+    margin: 0;
+    text-align: right;
+}
+
+.card img {
+    width: 45%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Подвал */
 #footer {
-    background: #262626;
-    color: #fff;
-    text-align: center;
-    border-top: 1px solid #888;
+    border-top: 1px solid lightgray;
     margin-top: 20px;
     padding: 10px;
+    text-align: center;
+}
+
+/* Маленькие экраны */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu li {
+        width: 50%;
+    }
+
+    #top-image {
+        grid-template-columns: 1fr;
+    }
+
+    #top-image img {
+         flex: none;
+    }
+
+    #content {
+        flex-direction: column;
+    }
+
+    #articles, #sidebar {
+        width: 100%;
+    }
+
+    #sidebar {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .article-body {
+        flex-direction: column;
+    }
+
+    .article-text, .card-text {
+        width: 100%;
+    }
+
+    .article-body img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .card img {
+        width: 100%;
+        height: 180px;
+    }
 }
