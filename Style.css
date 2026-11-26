@@ -69,11 +69,11 @@ p {
 }
 
 #articles {
-    flex: 5;
+    width: 70%;
 }
 
 #sidebar {
-    flex: 2;
+    width: 30%;
     border-left: 1px solid olive;
     padding-left: 20px;
 }
@@ -93,7 +93,11 @@ p {
 }
 
 .article-text {
-    flex: 1;
+    width: 50%;
+}
+
+.wide {
+    width: 75%;
 }
 
 .article-body img {
@@ -126,7 +130,7 @@ img.small {
 }
 
 .card-text {
-    flex: 1;
+    width: 55%;
 }
 
 .card h3 {
@@ -177,6 +181,10 @@ img.small {
         flex-direction: column;
     }
 
+    #articles, #sidebar {
+        width: 100%;
+    }
+
     #sidebar {
         border-left: none;
         padding-left: 0;
@@ -184,6 +192,10 @@ img.small {
 
     .article-body {
         flex-direction: column;
+    }
+
+    .article-text, .card-text {
+        width: 100%;
     }
 
     .article-body img {
